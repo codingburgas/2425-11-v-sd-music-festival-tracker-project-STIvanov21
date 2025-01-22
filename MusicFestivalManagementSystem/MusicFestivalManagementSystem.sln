@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicFestivalManagementSystem", "MusicFestivalManagementSystem\MusicFestivalManagementSystem.csproj", "{7F6874EB-E487-4850-97B8-EA8189A0CDD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicFestivalManagementSystem.DAL", "MusicFestivalManagementSystem.DAL\MusicFestivalManagementSystem.DAL.csproj", "{B8EE0E42-57AE-4858-85E6-08F0B339358C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicFestivalManagementSystem.BLL", "MusicFestivalManagementSystem.BLL\MusicFestivalManagementSystem.BLL.csproj", "{EB8E8623-4206-449C-8DF0-32381557B3A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicFestivalManagementSystem.ConsoleApp", "MusicFestivalManagementSystem.ConsoleApp\MusicFestivalManagementSystem.ConsoleApp.csproj", "{A9F8B775-F4D6-4740-A745-2BA05D9CC08F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F6874EB-E487-4850-97B8-EA8189A0CDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6874EB-E487-4850-97B8-EA8189A0CDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6874EB-E487-4850-97B8-EA8189A0CDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6874EB-E487-4850-97B8-EA8189A0CDD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8EE0E42-57AE-4858-85E6-08F0B339358C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8EE0E42-57AE-4858-85E6-08F0B339358C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8EE0E42-57AE-4858-85E6-08F0B339358C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8EE0E42-57AE-4858-85E6-08F0B339358C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8E8623-4206-449C-8DF0-32381557B3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8E8623-4206-449C-8DF0-32381557B3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8E8623-4206-449C-8DF0-32381557B3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8E8623-4206-449C-8DF0-32381557B3A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F8B775-F4D6-4740-A745-2BA05D9CC08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F8B775-F4D6-4740-A745-2BA05D9CC08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F8B775-F4D6-4740-A745-2BA05D9CC08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F8B775-F4D6-4740-A745-2BA05D9CC08F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
