@@ -7,4 +7,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MusicFestivalManagementSystem.BLL\MusicFestivalManagementSystem.BLL.csproj" />
+      <ProjectReference Include="..\MusicFestivalManagementSystem.ConsoleApp\MusicFestivalManagementSystem.ConsoleApp.csproj" />
+      <ProjectReference Include="..\MusicFestivalManagementSystem.DAL\MusicFestivalManagementSystem.DAL.csproj" />
+    </ItemGroup>
+
 </Project>
