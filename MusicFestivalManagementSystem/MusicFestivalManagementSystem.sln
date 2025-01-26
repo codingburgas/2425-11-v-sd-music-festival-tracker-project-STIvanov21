@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicFestivalManagementSyst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicFestivalManagementSystem.DAL", "MusicFestivalManagementSystem.DAL\MusicFestivalManagementSystem.DAL.csproj", "{B8EE0E42-57AE-4858-85E6-08F0B339358C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicFestivalManagementSystem.BLL", "MusicFestivalManagementSystem.BLL\MusicFestivalManagementSystem.BLL.csproj", "{EB8E8623-4206-449C-8DF0-32381557B3A1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +18,5 @@ Global
 		{B8EE0E42-57AE-4858-85E6-08F0B339358C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8EE0E42-57AE-4858-85E6-08F0B339358C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8EE0E42-57AE-4858-85E6-08F0B339358C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB8E8623-4206-449C-8DF0-32381557B3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB8E8623-4206-449C-8DF0-32381557B3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB8E8623-4206-449C-8DF0-32381557B3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB8E8623-4206-449C-8DF0-32381557B3A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
