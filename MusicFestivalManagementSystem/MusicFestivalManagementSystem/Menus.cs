@@ -272,7 +272,26 @@ public class Menus
 
     public void SearchEvent()
     {
-        Console.WriteLine("\nSearching for an event...\n");
-        Console.ReadKey();
+        Console.WriteLine("Enter Festival ID to search:");
+        string input = Console.ReadLine();
+
+        if (int.TryParse(input, out int festivalId))
+        {
+            Festival festival = _festivalRepository.GetFestivalById(festivalId);
+
+            if (festival.ID != -1)
+            {
+                Console.WriteLine($"Festival found: {festival.Name}");
+                EditFestivalMenu(festival);
+            }
+            else
+            {
+                Console.WriteLine("Festival not found.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number for the Festival ID.");
+        }
     }
 }
