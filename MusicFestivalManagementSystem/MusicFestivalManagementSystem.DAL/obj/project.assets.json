@@ -4733,32 +4733,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\STIvanov21\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\stili\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\STIvanov21\\RiderProjects\\2425-11-v-sd-music-festival-tracker-project-STIvanov21\\MusicFestivalManagementSystem\\MusicFestivalManagementSystem.DAL\\MusicFestivalManagementSystem.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\stili\\RiderProjects\\2425-11-v-sd-music-festival-tracker-project-STIvanov21\\MusicFestivalManagementSystem\\MusicFestivalManagementSystem.DAL\\MusicFestivalManagementSystem.DAL.csproj",
       "projectName": "MusicFestivalManagementSystem.DAL",
-      "projectPath": "C:\\Users\\STIvanov21\\RiderProjects\\2425-11-v-sd-music-festival-tracker-project-STIvanov21\\MusicFestivalManagementSystem\\MusicFestivalManagementSystem.DAL\\MusicFestivalManagementSystem.DAL.csproj",
-      "packagesPath": "C:\\Users\\STIvanov21\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\STIvanov21\\RiderProjects\\2425-11-v-sd-music-festival-tracker-project-STIvanov21\\MusicFestivalManagementSystem\\MusicFestivalManagementSystem.DAL\\obj\\",
+      "projectPath": "C:\\Users\\stili\\RiderProjects\\2425-11-v-sd-music-festival-tracker-project-STIvanov21\\MusicFestivalManagementSystem\\MusicFestivalManagementSystem.DAL\\MusicFestivalManagementSystem.DAL.csproj",
+      "packagesPath": "C:\\Users\\stili\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\stili\\RiderProjects\\2425-11-v-sd-music-festival-tracker-project-STIvanov21\\MusicFestivalManagementSystem\\MusicFestivalManagementSystem.DAL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\STIvanov21\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\stili\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4809,7 +4801,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\stili\\.dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MusicFestivalManagementSystem.DAL
-build_property.ProjectDir = C:\Users\STIvanov21\RiderProjects\2425-11-v-sd-music-festival-tracker-project-STIvanov21\MusicFestivalManagementSystem\MusicFestivalManagementSystem.DAL\
+build_property.ProjectDir = C:\Users\stili\RiderProjects\2425-11-v-sd-music-festival-tracker-project-STIvanov21\MusicFestivalManagementSystem\MusicFestivalManagementSystem.DAL\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -20,52 +20,70 @@ public class Menus
 
             if (db.Festivals.Count > 0)
             {
-                Console.WriteLine("List of Festivals:");
-                foreach (Festival festival in db.Festivals)
-                {
-                    Console.WriteLine($"\t- Name: {festival.Name}");
-                    Console.WriteLine($"\t\tID: {festival.ID}");
-                    Console.WriteLine($"\t\tStart Date: {festival.StartDate.ToString("yyyy-MM-dd")}");
-                    Console.WriteLine($"\t\tEnd Date: {festival.EndDate.ToString("yyyy-MM-dd")}");
-                    Console.WriteLine($"\t\tMain Artist: {festival.MainArtist}");
-                    Console.WriteLine($"\t\tLocation: {festival.Location}");
-                    Console.WriteLine($"\t\tAttendee Count: {festival.AttendeeCount}");
-                    Console.WriteLine();
-                }
-                // Option menu
-                Console.WriteLine("\nOptions:");
-                Console.WriteLine("\t1. Go Back");
-                Console.WriteLine("\t2. Edit Festival by ID");
+                string[] options = { "Go Back", "Edit Festival by ID" };
+                int selectedIndex = 0;
 
-                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                switch (keyInfo.Key)
+                while (true)
                 {
-                    case ConsoleKey.D1: // Go Back (key 1)
-                        return; // Exit the ViewEvents loop
+                    Console.Clear();
+                    Console.WriteLine("List of Festivals:");
+                    foreach (Festival festival in db.Festivals)
+                    {
+                        Console.WriteLine($"\t- Name: {festival.Name}");
+                        Console.WriteLine($"\t\tID: {festival.ID}");
+                        Console.WriteLine($"\t\tStart Date: {festival.StartDate.ToString("yyyy-MM-dd")}");
+                        Console.WriteLine($"\t\tEnd Date: {festival.EndDate.ToString("yyyy-MM-dd")}");
+                        Console.WriteLine($"\t\tMain Artist: {festival.MainArtist}");
+                        Console.WriteLine($"\t\tLocation: {festival.Location}");
+                        Console.WriteLine($"\t\tAttendee Count: {festival.AttendeeCount}");
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine("Options:");
 
-                    case ConsoleKey.D2: // Edit Festival by ID (key 2)
-                        int festivalId;
-                        while (true)
+                    for (int i = 0; i < options.Length; i++)
+                    {
+                        if (i == selectedIndex)
                         {
-                            Console.WriteLine("\nEnter Festival ID to edit: ");
-                            string input = Console.ReadLine();
-
-                            if (int.TryParse(input, out festivalId))
-                            {
-                                // Call function to edit festival by ID (replace with your implementation)
-                                EditFestival(festivalId);
-                                break;
-                            }
-                            else
-                            {
-                                Console.WriteLine("Invalid input. Please enter a number.");
-                            }
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($"  > {options[i]}");
+                            Console.ResetColor();
                         }
-                        break;
+                        else
+                        {
+                            Console.WriteLine($"    {options[i]}");
+                        }
+                    }
 
-                    default:
-                        Console.WriteLine("Invalid option. Please select 1 or 2.");
-                        break;
+                    ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                    switch (keyInfo.Key)
+                    {
+                        case ConsoleKey.UpArrow:
+                            selectedIndex = (selectedIndex == 0) ? options.Length - 1 : selectedIndex - 1;
+                            break;
+
+                        case ConsoleKey.DownArrow:
+                            selectedIndex = (selectedIndex == options.Length - 1) ? 0 : selectedIndex + 1;
+                            break;
+
+                        case ConsoleKey.Enter:
+                            if (selectedIndex == 0)
+                            {
+                                return;
+                            }
+                            else if (selectedIndex == 1)
+                            {
+                                int festivalId;
+                                Console.WriteLine("\nEnter Festival ID to edit: ");
+                                string input = Console.ReadLine();
+
+                                if (int.TryParse(input, out festivalId))
+                                {
+                                    EditFestival(festivalId);
+                                }
+                                return;
+                            }
+                            break;
+                    }
                 }
             }
             else
@@ -77,23 +95,15 @@ public class Menus
 
     public void EditFestival(int festivalId)
     {
-        Console.WriteLine("Enter Festival ID to edit:");
-        if (int.TryParse(Console.ReadLine(), out festivalId))
+        Festival festival = new Festival();
+        festival = _festivalRepository.GetFestivalById(festivalId);
+        if (festival.ID > -1)
         {
-            Festival festival = new Festival();
-            festival = _festivalRepository.GetFestivalById(festivalId);
-            if (festival.ID > -1)
-            {
-                EditFestivalMenu(festival);
-            }
-            else
-            {
-                Console.WriteLine("Festival not found.");
-            }
+            EditFestivalMenu(festival);
         }
         else
         {
-            Console.WriteLine("Invalid ID.");
+            Console.WriteLine("Festival not found.");
         }
     }
 
@@ -151,11 +161,11 @@ public class Menus
                 case ConsoleKey.Enter:
                     switch (selectedIndex)
                     {
-                        case 0: // Name
+                        case 0:
                             Console.WriteLine("Enter new name:");
                             festival.Name = Console.ReadLine();
                             break;
-                        case 1: // Start Date
+                        case 1:
                             Console.WriteLine("Enter new start date (yyyy-MM-dd):");
                             if (DateTime.TryParse(Console.ReadLine(), out DateTime startDate))
                             {
@@ -166,7 +176,7 @@ public class Menus
                                 Console.WriteLine("Invalid date format.");
                             }
                             break;
-                        case 2: // End Date
+                        case 2:
                             Console.WriteLine("Enter new end date (yyyy-MM-dd):");
                             if (DateTime.TryParse(Console.ReadLine(), out DateTime endDate))
                             {
@@ -177,15 +187,15 @@ public class Menus
                                 Console.WriteLine("Invalid date format.");
                             }
                             break;
-                        case 3: // Main Artist
+                        case 3:
                             Console.WriteLine("Enter new main artist:");
                             festival.MainArtist = Console.ReadLine();
                             break;
-                        case 4: // Location
+                        case 4:
                             Console.WriteLine("Enter new location:");
                             festival.Location = Console.ReadLine();
                             break;
-                        case 5: // Attendee Count
+                        case 5:
                             Console.WriteLine("Enter new attendee count:");
                             if (int.TryParse(Console.ReadLine(), out int attendeeCount))
                             {
@@ -196,11 +206,11 @@ public class Menus
                                 Console.WriteLine("Invalid attendee count.");
                             }
                             break;
-                        case 6: // Save Changes
+                        case 6:
                             _festivalRepository.UpdateFestival(festival);
                             Console.WriteLine("Festival updated successfully.");
                             return;
-                        case 7: // Cancel
+                        case 7:
                             Console.WriteLine("Edit canceled.");
                             return;
                     }

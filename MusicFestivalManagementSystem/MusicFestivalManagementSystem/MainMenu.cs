@@ -8,21 +8,18 @@ public class MainMenu
     
     public static void DisplayMainMenu()
     {
-        // Define menu options
         string[] menuOptions = { "View events", "Add event", "Search for an event", "Exit" };
         int selectedIndex = 0;
-
-        // Main menu loop
+        
         while (true)
         {
             Console.Clear();
-
-            // Display menu options
+            
             for (int i = 0; i < menuOptions.Length; i++)
             {
                 if (i == selectedIndex)
                 {
-                    Console.ForegroundColor = ConsoleColor.Yellow; // Highlight selected option
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine($"  > {menuOptions[i]}");
                     Console.ResetColor();
                 }
@@ -31,8 +28,7 @@ public class MainMenu
                     Console.WriteLine($"    {menuOptions[i]}");
                 }
             }
-
-            // Handle key presses
+            
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
             switch (keyInfo.Key)
             {
@@ -65,7 +61,7 @@ public class MainMenu
                             menus.SearchEvent();
                             break;
                         case 3:
-                            Environment.Exit(0); // Exit the application
+                            Environment.Exit(0);
                             break;
                     }
 

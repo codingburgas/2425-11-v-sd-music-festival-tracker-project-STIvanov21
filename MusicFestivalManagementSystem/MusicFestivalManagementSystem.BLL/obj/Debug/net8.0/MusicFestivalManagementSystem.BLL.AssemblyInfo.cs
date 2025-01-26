@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MusicFestivalManagementSystem.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00f12e5587db27f8845f02d54ce3ce72127e0e2f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1b782024d7b681206d95cfd07432f864f3f2383")]
 [assembly: System.Reflection.AssemblyProductAttribute("MusicFestivalManagementSystem.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MusicFestivalManagementSystem.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
